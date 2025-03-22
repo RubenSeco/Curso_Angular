@@ -15,11 +15,11 @@ export class LocaleService {
   }
 
   get getLocale() {
-    return this.currentLocale;
+    return this.currentLocale();
   }
 
   changeLocale(locale: AbailableLocal) {
-    localStorage.setItem("local", locale);
+    localStorage.setItem("locale", locale);
     this.currentLocale.set(locale);
     window.location.reload();
   }
